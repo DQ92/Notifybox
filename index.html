@@ -4,12 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="src/notifybox.css" />
+
     <title>Notifybox</title>
 </head>
 <body>
 
-<script src="src/notifybox.js" type="text/javascript"></script>
+<button type="button" class="button success" onclick="show('success')"> Success </button><br><br>
+<button type="button" class="button error" onclick="show('error')"> Error </button><br><br>
+<button type="button" class="button info" onclick="show('info')"> Info </button><br><br>
+<button type="button" class="button warning" onclick="show('warning')"> Warning </button><br><br><br>
 
+
+<input id="inp" class="input" type="text" value="Hej!"/>
+<input id="msg" class="input" type="text" value="It's example message!"/>
+<input id="timer" class="input" type="number" value="2"/> [s]
+
+<script src="src/notifybox.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var n = new Notifybox();
+
+    function show (name) {
+        var title = document.getElementById("inp").value;
+        var msg = document.getElementById("msg").value;
+        var time = document.getElementById("timer").value * 1000;
+
+        switch(name){
+            case 'success':
+                n.showSuccess(title, msg, time);
+                break;
+            case 'error':
+                n.showError(title, msg, time);
+                break;
+            case 'info':
+                n.showInfo(title, msg, time);
+                break;
+            case 'warning':
+                n.showWarning(title, msg, time);
+                break;
+        }
+    }
+</script>
 
 </body>
 </html>

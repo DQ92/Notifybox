@@ -9,7 +9,7 @@ function Notifybox() {
     this._queue = [];
     this._body = document.body;
     this._mainFixedDiv = document.createElement("div");
-    this._mainFixedDiv.className = "notification-fixed-div";
+    this._mainFixedDiv.className = "notifybox-fixed-div";
     this._body.appendChild(this._mainFixedDiv);
 }
 
@@ -52,22 +52,22 @@ Notifybox.prototype._show = function (modificator, title, message, timeDuration)
     var generatedKey = this.generateKey();
 
     var notificationBox = document.createElement("div");
-    notificationBox.className = 'notivication-box ' + modificator;
+    notificationBox.className = 'notifybox-box ' + modificator;
 
     var icoClose = document.createElement("div");
-    icoClose.className = "notification-ico ico-" + modificator;
+    icoClose.className = "notifybox-ico ico-" + modificator;
     icoClose.onclick = this._removeNotification.bind(this, generatedKey);
 
     var notificationBody = document.createElement("div");
-    notificationBody.className = 'notification-body';
+    notificationBody.className = 'notifybox-body';
 
     var notificationTitle = document.createElement("h5");
-    notificationTitle.className = "notification-title";
+    notificationTitle.className = "notifybox-title";
     notificationTitle.innerHTML = title;
 
     var notificationMessage = document.createElement("p");
     notificationMessage.innerHTML = '' + message;
-    notificationMessage.className = "notification-message";
+    notificationMessage.className = "notifybox-message";
 
     notificationBox.setAttribute("id", generatedKey);
     notificationBox.appendChild(icoClose);
@@ -86,7 +86,7 @@ Notifybox.prototype.generateKey = function () {
 
 Notifybox.prototype._addNotificationToDocumentBody = function (key, div) {
     var slideDiv = document.createElement('div');
-    slideDiv.className = 'notification-slide';
+    slideDiv.className = 'notifybox-slide';
     slideDiv.appendChild(div);
 
     this._queue.push({key: key, value: slideDiv});
