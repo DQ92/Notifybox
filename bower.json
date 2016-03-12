@@ -14,5 +14,20 @@
     "gruntfile.js",
     "package.json",
     "README.md"
-  ]
+  ],
+  ,
+  "description": "Simple JavaScript's notification without any dependencies.",
+  "main": [
+    "src/notifybox.js",
+    "src/notifybox.css"
+  ],
+  "keywords": [
+    "alert",
+    "notification",
+    "popup"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DQ92/Notifybox/"
+  },
 }
