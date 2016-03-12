@@ -82,7 +82,7 @@
     position: absolute;
     top: 19px;
     left: 23px;
-     border-radius: 5px;
+    border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     transform: rotate(45deg);
@@ -211,17 +211,27 @@
 
 .notifybox-box.warning {
     background: #FFC10D;
-    text-decoration: none;
-}
+    font-family: Arial;
+    color: #ffffff;
+    text-decoration: none;}
 
 .notifybox-box.warning:hover {
     background: #EEC14D;
+    font-family: Arial;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .notifybox-box.info {
     background: #00BCD4;
+    font-family: Arial;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .notifybox-box.info:hover {
     background: #59ABC3;
+    font-family: Arial;
+    color: #ffffff;
+    text-decoration: none;
 }
